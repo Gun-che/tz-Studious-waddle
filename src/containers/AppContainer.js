@@ -1,21 +1,20 @@
 import React from 'react';
-import './App.scss';
+import loadable from '@loadable/component'
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import {
   NavLink,
   Switch,
   BrowserRouter as Router,
   Route,
-  useRouteMatch,
 } from 'react-router-dom';
-import './App.scss';
-// import LoginBtns from '../containers/LoginBtns';
-import loadable from '@loadable/component'
+
+import { handlerExit } from '../actions/UserAction'
 import LoadingComponent from '../components/LoadingComponent/LoadingComponent';
 import Exit from '../components/Exit/Exit'
 import { ReactComponent as Logo } from '../logo.svg';
-import { connect } from 'react-redux';
 
-import { handlerExit } from '../actions/UserAction'
+import './App.scss';
 
 function App(props) {
 
