@@ -1,11 +1,45 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions/UserAction";
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, EXIT } from "../actions/UserAction";
 
 const initState = {
-  name: "Unknown",
-  surname: 'User',
-  age: '18',
+  success: false,
+  isFetching: false,
+  login: '',
+  message: '',
+  loggedIn: localStorage.getItem('loggedIn'),
 }
 
 export function userReducer(state = initState, action) {
-  return state;
+
+  switch (action.type) {
+    case LOGIN_REQUEST:
+      return {
+        ...state, isFetching: true, success: false, message: 'Loading...'
+      }
+
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        isFetching: false,
+        success: true,
+        login: action.payload.login,
+        message: '',
+        loggedIn: true
+      }
+
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+        success: false,
+        message: action.payload.message,
+      }
+    case EXIT:
+      return {
+        ...initState,
+        loggedIn: false
+      }
+
+    default:
+      return state;
+  }
 }
