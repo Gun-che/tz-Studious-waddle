@@ -13,6 +13,12 @@
       padding-right: 10px;
     }
   }
+  a {
+    color: white;
+    &.active {
+      color: red;
+    }
+  }
   .logo {
     margin-right: auto;
   }
