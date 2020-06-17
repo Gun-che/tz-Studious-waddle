@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { handlerUserInfoRequest } from '../actions/ProfileAction';
-import Profile from '../components/Profile/Profile';
-import PropTypes from 'prop-types'
 
+import Profile from '../components/Profile/Profile';
 
 function ProfileContainer(props) {
 
