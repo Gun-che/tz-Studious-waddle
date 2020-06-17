@@ -59,7 +59,7 @@ const Users = loadable(() => import('../Users/Users'), {
   fallback: LoadingComponent
 })
 
-const News = loadable(() => import('../News/News'), {
+const News = loadable(() => import('../../containers/NewsContainer'), {
   fallback: LoadingComponent
 })
 
