@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { handlerLogin } from '../actions/UserAction';
 import PromptLogin from '../components/PromptLogin/PromptLogin'
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 function Login(props) {
@@ -13,6 +14,7 @@ function Login(props) {
   function handlerSubmit(e) {
     e.preventDefault();
     props.handlerLogin(login, pass)
+    setPass('')
   }
 
   function handlerChange(e) {
@@ -26,12 +28,14 @@ function Login(props) {
 
   return (
     <>
-      {false ? <Redirect to='/exit' /> : <PromptLogin
+      {props.loggedIn ? <Redirect to='/profile' /> : <PromptLogin
         handlerChange={handlerChange}
         handlerSubmit={handlerSubmit}
         user={props.user}
         message={props.message}
-        success={props.success} />}
+        success={props.success}
+        login={login}
+        pass={pass} />}
     </>
   )
 }
@@ -49,6 +53,14 @@ const mapDispatchToProps = dispatch => {
   return {
     handlerLogin: (login, pass) => dispatch(handlerLogin(login, pass))
   }
+}
+
+Login.propTypes = {
+  user: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  success: PropTypes.bool.isRequired,
+  loggedIn: PropTypes.bool.isRequired,
+  handlerLogin: PropTypes.func.isRequired
 }
 
 

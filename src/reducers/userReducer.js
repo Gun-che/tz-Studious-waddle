@@ -5,7 +5,8 @@ const initState = {
   isFetching: false,
   login: '',
   message: '',
-  loggedIn: localStorage.getItem('loggedIn'),
+  loggedIn: JSON.parse(localStorage.getItem('loggedIn')) || false,
+  userId: +localStorage.getItem('userId') || 0,
 }
 
 export function userReducer(state = initState, action) {
@@ -23,7 +24,8 @@ export function userReducer(state = initState, action) {
         success: true,
         login: action.payload.login,
         message: '',
-        loggedIn: true
+        loggedIn: true,
+        userId: action.payload.id
       }
 
     case LOGIN_FAILURE:
