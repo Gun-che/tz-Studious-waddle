@@ -1,6 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router';
-
 
 export default function (props) {
   let Form = (
@@ -13,6 +11,7 @@ export default function (props) {
           id="login"
           placeholder="Login"
           onChange={props.handlerChange}
+          value={props.login}
         />
         <label htmlFor="password">Password</label>
         <input
@@ -20,6 +19,7 @@ export default function (props) {
           id="password"
           placeholder="Password"
           onChange={props.handlerChange}
+          value={props.pass}
         />
         <button type='submit'>Login</button>
       </form>
@@ -28,19 +28,16 @@ export default function (props) {
   )
   let tmp;
 
-  if (props.success) {
-    tmp = <Redirect to='/profile' />
-  } else if (props.message) {
+  if (props.message) {
     tmp = (
-      <>
+      <div className="failure">
         <h2>{props.message}</h2>
         {Form}
-      </>
+      </div>
     )
   } else {
-    tmp = Form;
+    tmp = <div>{Form}</div>;
   }
 
-
-  return <div>{tmp}</div>
+  return tmp
 }
