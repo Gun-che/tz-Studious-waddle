@@ -17,13 +17,14 @@ export const peopleReducer = (state = initState, action) => {
         ...state,
         isFetching: true,
         message: null,
+        data: [...action.payload]
       }
 
     case GET_USERS_SUCCESS:
       return {
         ...state,
         isFetching: false,
-        data: action.payload,
+        data: [...action.payload],
       }
 
     case GET_USERS_FAILURE:
