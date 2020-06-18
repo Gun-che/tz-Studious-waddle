@@ -1,0 +1,14 @@
+.wrap {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  max-width: 600px;
+  margin: auto;
+  img {
+    width: 290px;
+    height: 290px;
+    margin-top: 25px;
+    border-radius: 6px;
+  }
+}

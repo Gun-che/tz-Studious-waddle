@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { handlerExit } from '../actions/UserAction'
 import App from '../components/App/App'
 
-
-
 function AppContainer(props) {
 
   return (
@@ -16,8 +14,6 @@ function AppContainer(props) {
   );
 }
 
-
-
 const mapStateToProps = store => {
   return {
     loggedIn: store.user.loggedIn,
@@ -25,13 +21,11 @@ const mapStateToProps = store => {
   }
 }
 
-
 const mapDispatchToProps = dispatch => {
   return {
     handlerExit: () => dispatch(handlerExit())
   }
 }
-
 
 App.propTypes = {
   loggedIn: PropTypes.bool.isRequired,

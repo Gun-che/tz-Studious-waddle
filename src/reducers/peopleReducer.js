@@ -6,7 +6,7 @@ import {
 
 const initState = {
   isFetching: false,
-  data: [null],
+  data: [],
   message: null,
 }
 

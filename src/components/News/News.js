@@ -33,7 +33,7 @@ export default function News(props) {
               </div>
             )
           })}
-          <p className="count-news">Всего новостей: {data.length}</p>
+          <strong className="count-news">Всего новостей: {data.length}</strong>
         </>
       )
     }
