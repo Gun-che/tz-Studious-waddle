@@ -2,6 +2,8 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
   gap: 6px;
   margin-top: 20px;
   max-width: 1200px;
@@ -9,7 +11,7 @@
     padding: 6px;
     text-align: center;
     background: ghostwhite;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 1px solid gray;
     h3 {
       font-size: 12px;
@@ -19,6 +21,32 @@
     }
     img {
       border-radius: 50%;
+    }
+  }
+  .link {
+    color: rgb(90, 88, 88);
+    transition: all 0.2s ease;
+    &:active {
+      color: rgb(90, 88, 88);
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      .card {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+.wrap {
+  display: flex;
+  .btn {
+    margin: auto;
+    margin-top: 25px;
+    width: 130px;
+    &:hover,
+    &:focus {
+      box-shadow: inset 130px 0 rgb(125, 65, 169);
     }
   }
 }

@@ -11,6 +11,7 @@ import Exit from '../Exit/Exit'
 import { LoadingComponent } from '../LoadingComponent/LoadingComponent';
 
 import * as s from './App.module.scss';
+import UserPage from '../UserPage/UserPage';
 
 export default function App(props) {
   return (
@@ -28,6 +29,9 @@ export default function App(props) {
               </Route>
               <Route exact path='/users'>
                 <Users></Users>
+              </Route>
+              <Route exact path='/users/:userId'>
+                <UserPage data={props.data} />
               </Route>
               <Route exact path='/news'>
                 <News></News>

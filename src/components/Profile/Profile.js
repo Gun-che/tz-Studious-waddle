@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Loading } from '../LoadingComponent/LoadingComponent';
-
-
+import * as s from './Profile.module.scss'
+import img from './profile-photo.jpg'
 
 export default function Profile(props) {
-
-
 
   useEffect(() => {
     const handlerRequest = props.handlerRequest;
@@ -17,18 +15,21 @@ export default function Profile(props) {
 
     if (props.data.userId) {
       return (
-        <div>
-          <div>
+        <div className={s.wrap}>
+          <div className={s.info}><div className={s.loc}>
             <h2>Город: {props.data.city}</h2>
           </div>
-          <div>
-            <h2>Языки:</h2>
-            {props.data.languages.map(i => {
-              return <h3 key={i}>{i}</h3>
-            })}
+            <div className={s.lang}>
+              <h2>Языки:</h2>
+              {props.data.languages.map(i => {
+                return <h3 key={i}>{i}</h3>
+              })}
+            </div>
           </div>
-          <div>
-            <h2>Соц сети</h2>
+          <div className={s.photo}>
+            <img src={img} alt="nice girl" />
+          </div>
+          <div className={s.soc}>
             {props.data.social.map(i => {
               let src;
               switch (i.label) {
@@ -60,7 +61,8 @@ export default function Profile(props) {
               return <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href={i.link} key={i.link}>
+                href={i.link} key={i.link}
+                className={s.link}>
                 <img
                   src={src}
                   alt={i.label} /></a>
@@ -78,13 +80,9 @@ export default function Profile(props) {
 
   return (
     <div>
-      {props.loggedIn ?
+      {props.loggedIn ? <div>{tmp()}</div> :
 
-        <div>{tmp()}</div>
-
-        :
-
-        <h2>Чтобы увидеть данный раздел пожалуйста
+        <h2 className={s.auth}>Чтобы увидеть данный раздел, пожалуйста,
         <Link to='/login'> авторизуйтесь</Link>
         </h2>}
     </div>

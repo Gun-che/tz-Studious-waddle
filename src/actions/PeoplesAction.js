@@ -8,6 +8,7 @@ export const handlerUsersRequest = (amount, prevData = []) => {
   return async function (dispatch) {
     dispatch({
       type: GET_USERS_REQUEST,
+      payload: prevData
     })
 
     try {

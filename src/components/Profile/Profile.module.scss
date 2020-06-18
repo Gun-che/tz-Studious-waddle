@@ -1,0 +1,42 @@
+.wrap {
+  padding-top: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "info photo" "soc soc";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  .photo {
+    grid-area: photo;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+  .soc {
+    grid-area: soc;
+    display: flex;
+    justify-content: center;
+    .link {
+      margin: 0 10px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .info {
+    grid-area: info;
+    .loc {
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.auth {
+  text-align: center;
+  margin-top: 180px;
+}

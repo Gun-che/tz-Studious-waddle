@@ -1,21 +1,26 @@
 import React, { useEffect } from 'react'
-import { Loading } from '../LoadingComponent/LoadingComponent'
+import { LoadingThin, Loading } from '../LoadingComponent/LoadingComponent'
+import {
+  useRouteMatch,
+  Link,
+} from 'react-router-dom';
 
 import * as s from './Users.module.scss'
-
-
 
 export default function Users(props) {
 
   let { handlerRequest, isFetching, data, message } = props
+  let { url } = useRouteMatch();
 
   useEffect(() => {
-    handlerRequest(10)
-  }, [handlerRequest])
+    if (data.length === 0) {
+      handlerRequest(10)
+    }
+  }, [data.length, handlerRequest])
 
   const tmp = () => {
 
-    if (isFetching) {
+    if (isFetching && data.length === 0) {
       return <Loading />
 
     } else if (message) {
@@ -25,21 +30,17 @@ export default function Users(props) {
     } else if (data[0]) {
       return (
         <div className={s.grid}>
-          {data.map(i => {
+          {data.map((i, index) => {
             return (
-              <div className={s.card} key={i.login.md5}>
-                <img src={i.picture.medium} alt="" />
-                <h3>
-                  {i.name.title}.{' '}
-                  <strong>
+              <Link to={`${url}/${index}/`} key={i.login.md5} className={s.link}>
+                <div data-user={i} className={s.card} >
+                  <img src={i.picture.medium} alt="" />
+                  <h3>
                     {i.name.first} {i.name.last}
-                  </strong>
-                </h3>
-                <h4>Email: {i.email}</h4>
-                <h4>Username: {i.login.username}</h4>
-                <h4>Страна: {i.location.country} Город: {i.location.city}</h4>
-                <h4>Пол: {i.gender} Возраст: {i.dob.age}</h4>
-              </div>
+                  </h3>
+                  <h4>Пол: {i.gender} Возраст: {i.dob.age}</h4>
+                </div>
+              </Link>
             )
           })}
         </div>
@@ -54,7 +55,10 @@ export default function Users(props) {
   return (
     <div>
       {tmp()}
-      <button onClick={handlerMoreResultRequest}>Загрузить еще</button>
+      {(isFetching && data.length !== 0) ? <LoadingThin /> :
+        <div className={s.wrap}>
+          <button className={s.btn} onClick={handlerMoreResultRequest}>Загрузить еще</button>
+        </div>}
     </div>
   )
 }
