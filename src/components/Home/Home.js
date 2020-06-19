@@ -33,12 +33,20 @@ export default function Home(props) {
             <li>Fetch API</li>
           </ul>
         </li>
+        <li>Тестирование
+          <ul>
+            <li>Jest</li>
+            <li>Enzyme</li>
+            <li>Fetch-mock, fetch-mock-store</li>
+          </ul>
+        </li>
         <li>Разделение кода с помощью @loadable/component</li>
       </ul>
       <h4>Проблемные места</h4>
       <ul>
         <li>Не полное понимание концепций React hooks</li>
         <li>Расположение роутов в приложении(при индексированном роутинге)</li>
+        <li>Тесты :(</li>
       </ul>
     </div>
   )

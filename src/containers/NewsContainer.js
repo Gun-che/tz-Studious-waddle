@@ -1,19 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { handlerNewsRequest } from '../actions/NewsAction';
 
+import { Loading } from '../components/LoadingComponent/LoadingComponent'
+
 import News from '../components/News/News';
 
-function NewsContainer(props) {
-  return (
-    <News
-      data={props.data}
-      message={props.message}
-      isFetching={props.isFetching}
-      handlerRequest={props.handlerRequest}
-    />
-  )
+export function NewsContainer(props) {
+  let { handlerRequest } = props
+
+  useEffect(() => {
+    handlerRequest()
+  }, [handlerRequest])
+
+  const tmp = () => {
+
+    let { data, isFetching, message } = props
+
+    if (isFetching) {
+      return <Loading />
+
+    } else if (message) {
+      return <h2>{message}</h2>
+
+    } else if (data.length) {
+      return <News data={data} />
+    }
+  }
+
+  return <div>{tmp()}</div>
 }
 
 NewsContainer.propTypes = {

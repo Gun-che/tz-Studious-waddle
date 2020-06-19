@@ -9,3 +9,5 @@ export const APIRandomuser = axios.create({
   baseURL: 'https://randomuser.me/api/',
   responseType: 'json'
 })
+
+export const API_ROOT = 'https://mysterious-reef-29460.herokuapp.com/api/v1'

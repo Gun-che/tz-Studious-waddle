@@ -4,7 +4,7 @@ import {
   GET_NEWS_FAILURE
 } from '../actions/NewsAction';
 
-const initState = {
+export const initState = {
   isFetching: false,
   data: [],
   message: ''

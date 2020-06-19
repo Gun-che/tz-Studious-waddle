@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News container News container init renders properly 1`] = `ShallowWrapper {}`;
+
+exports[`News container News container init renders properly 2`] = `ShallowWrapper {}`;
+
+exports[`News container News container loading renders properly 1`] = `ShallowWrapper {}`;
+
+exports[`News container News container render <News> renders properly 1`] = `ShallowWrapper {}`;
+
+exports[`News container News container with error renders properly 1`] = `ShallowWrapper {}`;

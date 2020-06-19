@@ -8,7 +8,7 @@ export const LoadingComponent = <div className={s.fullWrap}>
 
 export function Loading(props) {
   return (<div className={s.fullWrap}>
-    <img className={s.loading} src={img} alt="loading" />
+    <img className={s.loading} id="loading" src={img} alt="loading" />
   </div>)
 }
 
