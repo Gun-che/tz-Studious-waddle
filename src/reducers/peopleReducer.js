@@ -4,7 +4,7 @@ import {
   GET_USERS_FAILURE
 } from '../actions/PeoplesAction';
 
-const initState = {
+export const initState = {
   isFetching: false,
   data: [],
   message: null,

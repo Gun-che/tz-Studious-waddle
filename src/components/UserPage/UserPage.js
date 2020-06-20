@@ -19,8 +19,8 @@ export default function (props) {
             <strong>
               {name.first} {name.last}
             </strong>
-            <h4>Пол: {gender} Возраст: {dob.age}</h4>
           </h3>
+            <h4>Пол: {gender} Возраст: {dob.age}</h4>
             <h4>Email: {email}</h4>
             <h4>Username: {login.username}</h4>
             <h4>Страна: {location.country}, штат: {location.state}, </h4>

@@ -1,6 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { NewsContainer } from '../NewsContainer'
+import { shallow, mount } from 'enzyme'
+import { NewsContainer } from '../containers/NewsContainer'
 
 describe('News container', () => {
   const props = {
@@ -76,14 +76,15 @@ describe('News container', () => {
       handlerRequest: mockFetchGetNews,
     }
 
-    const newsContainer = shallow(<NewsContainer {...nextProps} />)
+    const newsContainer = mount(<NewsContainer {...nextProps} />)
 
     it('renders properly', () => {
       expect(newsContainer).toMatchSnapshot()
     })
 
-    // it('dispatches the handlerRequest method it receives from props', () => {
-    //   expect(mockFetchGetNews).toHaveBeenCalledTimes(1)
-    // })
+    it('dispatches the handlerRequest method it receives from props', () => {
+
+      expect(mockFetchGetNews).toHaveBeenCalled()
+    })
   })
 })

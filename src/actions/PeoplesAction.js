@@ -31,8 +31,7 @@ export const handlerUsersRequest = (amount, prevData = []) => {
           payload: userData
         })
       }
-
-      console.log(userData)
+      return userData
 
     } catch (e) {
       console.log(e)

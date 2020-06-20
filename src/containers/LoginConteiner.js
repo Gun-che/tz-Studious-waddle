@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
-function Login(props) {
+export function Login(props) {
 
   const [login, setLogin] = useState('');
   const [pass, setPass] = useState('');

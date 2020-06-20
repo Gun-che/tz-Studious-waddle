@@ -46,7 +46,7 @@ export default function Home(props) {
       <ul>
         <li>Не полное понимание концепций React hooks</li>
         <li>Расположение роутов в приложении(при индексированном роутинге)</li>
-        <li>Тесты :(</li>
+        <li>Тестирование React hook'ов (прозванивание state)</li>
       </ul>
     </div>
   )

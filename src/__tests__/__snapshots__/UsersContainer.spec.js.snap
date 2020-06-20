@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users container Users container init renders properly 1`] = `ShallowWrapper {}`;
+
+exports[`Users container Users container render <Users> renders properly 1`] = `ShallowWrapper {}`;

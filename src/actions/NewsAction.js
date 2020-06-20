@@ -9,7 +9,7 @@ export const handlerNewsRequest = () => dispatch => {
     type: GET_NEWS_REQUEST
   })
 
-  fetch('https://mysterious-reef-29460.herokuapp.com/api/v1/news', {
+  return fetch('https://mysterious-reef-29460.herokuapp.com/api/v1/news', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -42,5 +42,4 @@ export const handlerNewsRequest = () => dispatch => {
       }
     })
     .catch(console.log)
-
 }
