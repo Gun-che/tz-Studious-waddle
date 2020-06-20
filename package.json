@@ -42,8 +42,10 @@
     ]
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.18.1",
     "expect": "^26.0.1",
     "fetch-mock": "^9.10.1",
+    "jest-mock-axios": "^4.2.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
     "redux-logger": "^3.0.6",

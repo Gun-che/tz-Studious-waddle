@@ -6,6 +6,7 @@ import { handlerUsersRequest } from '../actions/PeoplesAction';
 import Users from '../components/Users/Users'
 
 export const UserContainer = (props) => {
+
   return (
     <Users
       isFetching={props.isFetching}

@@ -1,9 +1,9 @@
-import { newsReducer, initState } from '../newsReducer';
+import { newsReducer, initState } from '../reducers/newsReducer';
 import {
   GET_NEWS_SUCCESS,
   GET_NEWS_REQUEST,
   GET_NEWS_FAILURE
-} from '../../actions/NewsAction';
+} from '../actions/NewsAction';
 
 describe('news reducer', () => {
 
