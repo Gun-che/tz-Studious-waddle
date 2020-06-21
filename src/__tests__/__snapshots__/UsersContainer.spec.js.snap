@@ -2,4 +2,8 @@
 
 exports[`Users container Users container init renders properly 1`] = `ShallowWrapper {}`;
 
+exports[`Users container Users container loading renders properly 1`] = `ReactWrapper {}`;
+
 exports[`Users container Users container render <Users> renders properly 1`] = `ShallowWrapper {}`;
+
+exports[`Users container Users container with error renders properly 1`] = `ReactWrapper {}`;
