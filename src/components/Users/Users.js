@@ -1,13 +1,18 @@
 import React, { useEffect } from 'react'
 import { LoadingThin, Loading } from '../LoadingComponent/LoadingComponent'
+import UserPage from '../UserPage/UserPage'
 import {
   useRouteMatch,
   Link,
+  withRouter,
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from 'react-router-dom';
 
 import * as s from './Users.module.scss'
 
-export default function Users(props) {
+export function Users(props) {
 
   let { handlerRequest, isFetching, data, message } = props
   let { url } = useRouteMatch();
@@ -54,11 +59,25 @@ export default function Users(props) {
 
   return (
     <div>
-      {tmp()}
-      {(isFetching && data.length !== 0) ? <LoadingThin /> :
-        <div className={s.wrap}>
-          <button className={s.btn} onClick={handlerMoreResultRequest}>Загрузить еще</button>
-        </div>}
+      <Router>
+        <Switch>
+          <Route exact path='/users'>
+            <div>
+
+              {tmp()}
+              {(isFetching && data.length !== 0) ? <LoadingThin /> :
+                <div className={s.wrap}>
+                  <button className={s.btn} onClick={handlerMoreResultRequest}>Загрузить еще</button>
+                </div>}
+            </div>
+          </Route>
+          <Route exact path='/users/:userId'>
+            <UserPage data={props.data} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   )
 }
+
+export default withRouter(Users)

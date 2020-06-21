@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { handlerUsersRequest } from '../actions/PeoplesAction';
+import { handlerUsersRequest } from '../actions/PeoplesAction'
 
 import Users from '../components/Users/Users'
 

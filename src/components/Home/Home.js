@@ -47,6 +47,7 @@ export default function Home(props) {
         <li>Не полное понимание концепций React hooks</li>
         <li>Расположение роутов в приложении(при индексированном роутинге)</li>
         <li>Тестирование React hook'ов (прозванивание state)</li>
+        <li>Тестирование Routera (Error: Uncaught [TypeError: Cannot read property 'location' of undefined])</li>
       </ul>
     </div>
   )
