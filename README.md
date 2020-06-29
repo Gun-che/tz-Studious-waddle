@@ -2,43 +2,45 @@
 
 ## На этом сайте использованы следующие библиотеки и технологии
 
-- React
-
 ---
+
+### React
 
 - JSX
 - React hooks
 
-* Redux
-
 ---
+
+### Redux
 
 - Использованы все основные инструменты: Actions, Reducers, store, Provider, dispatch
 - Redux Thunk
 
-* React Router
-
 ---
+
+### React Router
 
 - Использованны инструменты: Link, NavLink, Route, Switch, BrowserRouter, useRouteMatch, useParams
 - использован стандартный и индексированный роутинг
 
-* AJAX
-
 ---
+
+### AJAX
 
 - React Axios
 - Fetch API
 
-* Тестирование
-
 ---
+
+### Тестирование
 
 - Jest
 - Enzyme
 - Fetch-mock, fetch-mock-store
 
-* Разделение кода с помощью @loadable/component
+---
+
+### Разделение кода с помощью @loadable/component
 
 ---
 
