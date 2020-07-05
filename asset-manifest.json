@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/tz-Studious-waddle/static/css/main.9f6a4c18.chunk.css",
+    "main.js": "/tz-Studious-waddle/static/js/main.2dbbfb24.chunk.js",
+    "main.js.map": "/tz-Studious-waddle/static/js/main.2dbbfb24.chunk.js.map",
+    "runtime-main.js": "/tz-Studious-waddle/static/js/runtime-main.6e5e0a4e.js",
+    "runtime-main.js.map": "/tz-Studious-waddle/static/js/runtime-main.6e5e0a4e.js.map",
+    "static/js/2.53e64bec.chunk.js": "/tz-Studious-waddle/static/js/2.53e64bec.chunk.js",
+    "static/js/2.53e64bec.chunk.js.map": "/tz-Studious-waddle/static/js/2.53e64bec.chunk.js.map",
+    "static/css/3.2df36208.chunk.css": "/tz-Studious-waddle/static/css/3.2df36208.chunk.css",
+    "static/js/3.194932d8.chunk.js": "/tz-Studious-waddle/static/js/3.194932d8.chunk.js",
+    "static/js/3.194932d8.chunk.js.map": "/tz-Studious-waddle/static/js/3.194932d8.chunk.js.map",
+    "static/css/4.999a78dc.chunk.css": "/tz-Studious-waddle/static/css/4.999a78dc.chunk.css",
+    "static/js/4.7606eef9.chunk.js": "/tz-Studious-waddle/static/js/4.7606eef9.chunk.js",
+    "static/js/4.7606eef9.chunk.js.map": "/tz-Studious-waddle/static/js/4.7606eef9.chunk.js.map",
+    "static/css/5.a6548223.chunk.css": "/tz-Studious-waddle/static/css/5.a6548223.chunk.css",
+    "static/js/5.8a35c8cf.chunk.js": "/tz-Studious-waddle/static/js/5.8a35c8cf.chunk.js",
+    "static/js/5.8a35c8cf.chunk.js.map": "/tz-Studious-waddle/static/js/5.8a35c8cf.chunk.js.map",
+    "static/js/6.9e3e1e97.chunk.js": "/tz-Studious-waddle/static/js/6.9e3e1e97.chunk.js",
+    "static/js/6.9e3e1e97.chunk.js.map": "/tz-Studious-waddle/static/js/6.9e3e1e97.chunk.js.map",
+    "static/js/7.a243bf8d.chunk.js": "/tz-Studious-waddle/static/js/7.a243bf8d.chunk.js",
+    "static/js/7.a243bf8d.chunk.js.map": "/tz-Studious-waddle/static/js/7.a243bf8d.chunk.js.map",
+    "index.html": "/tz-Studious-waddle/index.html",
+    "precache-manifest.7652b4966ebd6b260a665776ad89b7dc.js": "/tz-Studious-waddle/precache-manifest.7652b4966ebd6b260a665776ad89b7dc.js",
+    "service-worker.js": "/tz-Studious-waddle/service-worker.js",
+    "static/css/3.2df36208.chunk.css.map": "/tz-Studious-waddle/static/css/3.2df36208.chunk.css.map",
+    "static/css/4.999a78dc.chunk.css.map": "/tz-Studious-waddle/static/css/4.999a78dc.chunk.css.map",
+    "static/css/5.a6548223.chunk.css.map": "/tz-Studious-waddle/static/css/5.a6548223.chunk.css.map",
+    "static/css/main.9f6a4c18.chunk.css.map": "/tz-Studious-waddle/static/css/main.9f6a4c18.chunk.css.map",
+    "static/js/2.53e64bec.chunk.js.LICENSE.txt": "/tz-Studious-waddle/static/js/2.53e64bec.chunk.js.LICENSE.txt",
+    "static/media/404.jpg": "/tz-Studious-waddle/static/media/404.de442959.jpg",
+    "static/media/loading.gif": "/tz-Studious-waddle/static/media/loading.2f6d2536.gif",
+    "static/media/logo.bf05268b.svg": "/tz-Studious-waddle/static/media/logo.bf05268b.svg",
+    "static/media/profile-photo.jpg": "/tz-Studious-waddle/static/media/profile-photo.d6974370.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e5e0a4e.js",
+    "static/js/2.53e64bec.chunk.js",
+    "static/css/main.9f6a4c18.chunk.css",
+    "static/js/main.2dbbfb24.chunk.js"
+  ]
+}
