@@ -4,7 +4,7 @@ import React from 'react'
 export default function News(props) {
   let { data } = props
   return (
-    <>
+    <div className="anim">
       {data.map(i => {
         return (
           <div
@@ -16,6 +16,6 @@ export default function News(props) {
         )
       })}
       <strong className="count-news">Всего новостей: {data.length}</strong>
-    </>
+    </div>
   )
 }

@@ -4,7 +4,7 @@ import React from 'react'
 export default function Home(props) {
 
   return (
-    <div>
+    <div className="anim">
       <h2>Home</h2>
       <h3>Добро пожаловать на стартовую страницу React app after theory! </h3>
       <h4>На этом сайте использованы следующие библиотеки и технологии</h4>

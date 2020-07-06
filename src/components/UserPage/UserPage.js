@@ -36,9 +36,9 @@ export default function (props) {
     tmp = () => <NotFound />
   }
   return (
-    <>
+    <div className="anim">
       <div>{tmp()}</div>
       <Link to='/users'>Назад</Link>
-    </>
+    </div>
   )
 }

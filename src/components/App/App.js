@@ -12,6 +12,7 @@ import Exit from '../Exit/Exit'
 import { LoadingComponent } from '../LoadingComponent/LoadingComponent';
 
 import * as s from './App.module.scss';
+import NotFound from '../NotFound/NotFound';
 
 export default function App(props) {
 
@@ -30,7 +31,7 @@ export default function App(props) {
               <Route exact path='/profile'>
                 <Profile></Profile>
               </Route>
-              <Route exact path='/users'>
+              <Route path='/users'>
                 <Users></Users>
               </Route>
               <Route exact path='/news'>
@@ -42,6 +43,9 @@ export default function App(props) {
               <Route exact path='/exit'>
                 <Exit handlerExit={props.handlerExit}
                   loggedIn={props.loggedIn}></Exit>
+              </Route>
+              <Route path='*'>
+                <NotFound />
               </Route>
             </Switch>
           </section>
