@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Loading } from '../LoadingComponent/LoadingComponent';
 import * as s from './Profile.module.scss'
 import img from './profile-photo.jpg'
+import { linkFormatter } from '../../utils/linksFormatter';
 
 export default function Profile(props) {
 
@@ -30,43 +31,20 @@ export default function Profile(props) {
             <img src={img} alt="nice girl" />
           </div>
           <div className={s.soc}>
-            {props.data.social.map(i => {
-              let src;
-              switch (i.label) {
-                case 'vk':
-                  src = 'logo-vk.png'
-                  break;
+            {props.data.social
+              .sort((a, b) => b.label === 'web' ? 1 : -1)
+              .map(i => {
+                const src = linkFormatter(i)
 
-                case 'telegram':
-                  src = 'logo-telegram.png'
-                  break;
-
-                case 'youtube':
-                  src = 'logo-youtube.png'
-                  break;
-
-                case 'twitter':
-                  src = 'logo-twitter.png'
-                  break;
-
-                case 'twitch':
-                  src = 'logo-twitch.png'
-                  break;
-
-                default:
-                  src = 'logo-web.png'
-                  break;
-              }
-
-              return <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href={i.link} key={i.link}
-                className={s.link}>
-                <img
-                  src={src}
-                  alt={i.label} /></a>
-            })}
+                return <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href={i.link} key={i.link}
+                  className={s.link}>
+                  <img
+                    src={src}
+                    alt={i.label} /></a>
+              })}
           </div>
         </div>
       )
@@ -79,7 +57,7 @@ export default function Profile(props) {
   }
 
   return (
-    <div>
+    <div className="anim">
       {props.loggedIn ? <div>{tmp()}</div> :
 
         <h2 className={s.auth}>Чтобы увидеть данный раздел, пожалуйста,

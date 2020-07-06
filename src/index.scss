@@ -27,3 +27,26 @@ button {
     box-shadow: inset 70px 0 rgb(125, 65, 169);
   }
 }
+
+.anim {
+  animation: fadeInContent 0.4s;
+}
+
+.anim-light {
+  animation: fadeInContentLight 0.4s;
+}
+
+@keyframes fadeInContent {
+  from {
+    margin-top: 2vh;
+    filter: blur(2px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInContentLight {
+  from {
+    filter: blur(2px);
+    opacity: 0;
+  }
+}

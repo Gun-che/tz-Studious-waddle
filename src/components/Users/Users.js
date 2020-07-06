@@ -16,7 +16,6 @@ export function Users(props) {
 
   let { handlerRequest, isFetching, data, message } = props
   let { url } = useRouteMatch();
-
   useEffect(() => {
     if (data.length === 0) {
       handlerRequest(10)
@@ -32,7 +31,7 @@ export function Users(props) {
       console.log(message)
       return <h2>Something going wrong ({message.status})</h2>
 
-    } else if (data[0]) {
+    } else {
       return (
         <div className={s.grid}>
           {data.map((i, index) => {
@@ -59,23 +58,19 @@ export function Users(props) {
 
   return (
     <div>
-      <Router>
-        <Switch>
-          <Route exact path='/users'>
-            <div>
+      <Route exact path='/users'>
+        <div className="anim-light">
 
-              {tmp()}
-              {(isFetching && data.length !== 0) ? <LoadingThin /> :
-                <div className={s.wrap}>
-                  <button className={s.btn} onClick={handlerMoreResultRequest}>Загрузить еще</button>
-                </div>}
-            </div>
-          </Route>
-          <Route exact path='/users/:userId'>
-            <UserPage data={props.data} />
-          </Route>
-        </Switch>
-      </Router>
+          {tmp()}
+          {(isFetching && data.length !== 0) ? <LoadingThin /> :
+            <div className={s.wrap}>
+              <button className={s.btn} onClick={handlerMoreResultRequest}>Загрузить еще</button>
+            </div>}
+        </div>
+      </Route>
+      <Route exact path='/users/:userId'>
+        <UserPage data={props.data} />
+      </Route>
     </div>
   )
 }

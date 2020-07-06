@@ -4,7 +4,7 @@ import { LoadingThin } from '../LoadingComponent/LoadingComponent'
 
 export default function (props) {
   let Form = (
-    <div className={s.formWrap}>
+    <div className={s.formWrap + ' anim'}>
       <h1>Login</h1>
       <form action="" onSubmit={props.handlerSubmit}>
         <label

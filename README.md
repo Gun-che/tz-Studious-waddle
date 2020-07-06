@@ -2,7 +2,7 @@
 
 ## В этом приложении использованы следующие библиотеки и технологии
 
-## [DEMO](https://gun-che.github.io/tz-Studious-waddle.github.io/)
+## [DEMO](https://gun-che.github.io/tz-Studious-waddle/)
 
 ---
 

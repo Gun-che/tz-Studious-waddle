@@ -4,7 +4,7 @@ import img from './404.jpg'
 
 
 export default () => (
-  <div className={s.wrap}>
+  <div className={s.wrap + ' anim'}>
     <img src={img} alt="404 not found" />
   </div>
 )
