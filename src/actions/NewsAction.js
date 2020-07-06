@@ -1,3 +1,4 @@
+import { messages } from "../utils/messages";
 
 export const GET_NEWS_REQUEST = 'GET_NEWS_REQUEST';
 export const GET_NEWS_SUCCESS = 'GET_NEWS_SUCCESS';
@@ -38,7 +39,7 @@ export const handlerNewsRequest = () => (dispatch, getState) => {
           type: GET_NEWS_FAILURE,
           payload: result
         })
-        throw new Error('Something going wrong:(')
+        throw new Error(messages.baseError)
       }
     })
     .catch(console.log)

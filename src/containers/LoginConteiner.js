@@ -5,21 +5,33 @@ import PromptLogin from '../components/PromptLogin/PromptLogin'
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import { messages } from '../utils/messages'
+
 
 export function Login(props) {
 
   const [login, setLogin] = useState('');
   const [pass, setPass] = useState('');
+  const [formMsg, setFormMsg] = useState('')
 
   function handlerSubmit(e) {
     e.preventDefault();
-    props.handlerLogin(login, pass)
-    setPass('')
+
+    if (!login || !pass) {
+      setFormMsg(messages.emptyFieldForm)
+
+    } else {
+      props.handlerLogin(login, pass);
+      setPass('');
+      setFormMsg('')
+    }
   }
 
   function handlerChange(e) {
+
     if (e.target.id === 'login') {
       setLogin(e.target.value)
+
     } else if (e.target.id === 'password') {
       setPass(e.target.value)
     }
@@ -32,7 +44,7 @@ export function Login(props) {
         handlerChange={handlerChange}
         handlerSubmit={handlerSubmit}
         user={props.user}
-        message={props.message}
+        message={props.message + formMsg}
         success={props.success}
         login={login}
         pass={pass} />}

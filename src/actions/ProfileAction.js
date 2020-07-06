@@ -1,4 +1,5 @@
 import API from '../utils/API'
+import { messages } from '../utils/messages'
 
 export const GET_USER_INFO_REQUEST = 'GET_USER_INFO_REQUEST';
 export const GET_USER_INFO_SUCCESS = 'GET_USER_INFO_SUCCESS';
@@ -15,20 +16,20 @@ export function handlerUserInfoRequest(id) {
     let info = await API.get(`/user-info/${id}/`)
 
     if (info.status !== 200) {
-      console.log('download error:(')
+      console.error(info)
       dispatch({
         type: GET_USER_INFO_FAILURE,
         payload: {
-          message: 'download error'
+          message: messages.fetchError
         }
       })
 
     } else if (info.data.status === 'err') {
-      console.log(`invalid request:( (${info.data.message})`)
+      console.log(messages[info.data.message]);
       dispatch({
         type: GET_USER_INFO_FAILURE,
         payload: {
-          message: `invalid request:( (${info.data.message})`
+          message: messages[info.data.message],
         }
       })
 
@@ -42,11 +43,11 @@ export function handlerUserInfoRequest(id) {
       })
 
     } else {
-      console.log('unknown error:(')
+      console.log(messages.baseError)
       dispatch({
         type: GET_USER_INFO_FAILURE,
         payload: {
-          message: 'unknown error'
+          message: messages.baseError
         }
       })
     }

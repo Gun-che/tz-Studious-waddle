@@ -1,4 +1,5 @@
 import API from '../utils/API'
+import { messages } from '../utils/messages'
 
 export const LOGIN_REQUEST = 'LOGIN_REQUEST'; export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'; export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const EXIT = 'EXIT'
@@ -31,7 +32,7 @@ export function handlerLogin(login, pass) {
       dispatch({
         type: LOGIN_FAILURE,
         payload: {
-          message: 'Ошибка загрузки'
+          message: messages.fetchError
         }
       })
 
@@ -41,7 +42,7 @@ export function handlerLogin(login, pass) {
       dispatch({
         type: LOGIN_FAILURE,
         payload: {
-          message: `Имя пользователя или пароль введены не верно (${res.data.message})`
+          message: messages[res.data.message] || messages.baseError
         }
       })
     }

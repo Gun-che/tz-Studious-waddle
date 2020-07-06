@@ -15,7 +15,6 @@ export default function (props) {
           type="text"
           id="login"
           placeholder="Login@example.com"
-          required
           pattern=".+@.+\..+"
           onChange={props.handlerChange}
           value={props.login}
@@ -27,7 +26,6 @@ export default function (props) {
           className={s.i2}
           type="password"
           id="password"
-          required
           minLength="4"
           maxLength="16"
           placeholder="Password"
@@ -35,7 +33,10 @@ export default function (props) {
           value={props.pass}
         />
         <div className={s.submit}>
-          <button className={s.btn} type='submit'>Login</button>
+          <button
+            className={s.btn}
+            type='submit'
+          >Login</button>
         </div>
       </form>
 
