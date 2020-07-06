@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   Switch,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   useHistory
 } from 'react-router-dom';
