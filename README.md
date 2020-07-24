@@ -1,4 +1,4 @@
-# Добро пожаловать на README.md React app after theory!
+# Studius Waddle
 
 ## [DEMO](https://gun-che.github.io/tz-Studious-waddle/)
 
